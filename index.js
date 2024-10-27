@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const error = require("./utils/error.js");
 const usersRouter = require("./routes/users.js");
 const moviesRouter = require("./routes/movies.js");
 const reservationsRouter = require("./routes/reservations.js");
@@ -27,8 +28,12 @@ app.use((req, res, next) => {
   next(error(404, "Resource Not Found"));
 });
 
+// 404 Error Handling Middleware
+app.use((req, res, next) => {
+  next(error(404, "Resource Not Found"));
+});
+
 app.use((err, req, res, next) => {
-  console.log(err);
   res.status(err.status || 500);
   res.json({ error: err.message });
 });
