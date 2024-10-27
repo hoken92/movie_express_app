@@ -1,4 +1,4 @@
-const movieShowings = [
+const movies = [
   {
     id: 1,
     movie: "Way, Way Back, The",
@@ -71,4 +71,4 @@ const movieShowings = [
   },
 ];
 
-module.exports = movieShowings;
+module.exports = movies;
