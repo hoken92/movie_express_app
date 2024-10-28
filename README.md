@@ -21,25 +21,22 @@ This Express API contains users, movie listings and reservations made by users.
 
 ### API Endpoints
 
-| HTTP Verbs | Endpoints | Action |
-| ---------- | --------- | ------ |
-
-| Users |
-| GET | /users | To sign up a new user account |
-| GET | /users/:id | To login an existing user account |
-| GET | /users/:id/reservations | To create a new cause |
-| GET | /users/:id/reservations?movie_id=value | To create a new cause |
-
-| Movies |
-| GET | /movies | To retrieve all causes on the platform |
-| GET | /movies/:id | To retrieve details of a single cause |
-| PATCH | /api/causes/:causeId | To edit the details of a single cause |
-
-| Reservations |
-| GET | /users/:id/reservations?movie_id=value | To create a new cause |
-| DELETE | /api/causes/:causeId | To delete a single cause |
-| GET | /api/causes/:causeId | To retrieve details of a single cause |
-| PATCH | /api/causes/:causeId | To edit the details of a single cause |
+| HTTP Verbs   | Endpoints                              | Action                                 |
+| ------------ | -------------------------------------- | -------------------------------------- |
+| Users        | ---------                              | ------                                 |
+| GET          | /users                                 | To sign up a new user account          |
+| GET          | /users/:id                             | To login an existing user account      |
+| GET          | /users/:id/reservations                | To create a new cause                  |
+| GET          | /users/:id/reservations?movie_id=value | To create a new cause                  |
+| Movies       | ---------                              | ------                                 |
+| GET          | /movies                                | To retrieve all causes on the platform |
+| GET          | /movies/:id                            | To retrieve details of a single cause  |
+| PATCH        | /api/causes/:causeId                   | To edit the details of a single cause  |
+| Reservations | ---------                              | ------                                 |
+| GET          | /users/:id/reservations?movie_id=value | To create a new cause                  |
+| DELETE       | /api/causes/:causeId                   | To delete a single cause               |
+| GET          | /api/causes/:causeId                   | To retrieve details of a single cause  |
+| PATCH        | /api/causes/:causeId                   | To edit the details of a single cause  |
 
 ### Technologies Used
 
