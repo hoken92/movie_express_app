@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Reservation</title>
+    <script defer src="../routes/reservations.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/new_reservations">Reservation</a></li>
+      </ul>
+    </nav>
+    <h1>Movie Reservation</h1>
+
+    <div id="app">
+      <form action="/reservations" method="post" id="new_reservation">
+        <label>
+          First Name:
+          <input type="text" name="firstname" id="firstname" required />
+        </label>
+        <label>
+          Last Name:
+          <input type="text" name="lastname" id="lastname" required />
+        </label>
+        <label>
+          Movie:
+          <select name="movieId" id="movie">
+            <option value="1">Way, Way Back, The</option>
+            <option value="2">Trek Nation</option>
+            <option value="3">
+              Beats Rhymes & Life: The Travels of a Tribe Called Quest
+            </option value=>
+            <option value="4">Frozen</option>
+            <option value="5">Adventure|Animation|Comedy|Fantasy|Musical|Romance</option>
+            <option value="6">Strong Man, The</option>
+            <option value="7">Vampire Bat, The</option>
+            <option value="8">Triggermen</option>
+            <option value="9">Summer House</option>
+            <option value="10">Private Benjamin</option>
+          </select>
+        </label>
+        <label>
+          Showing Date:
+          <input
+            type="date"
+            name="show_date"
+            id="show_date"
+            min="2024-10-26"
+            max="2024-11-07"
+          />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
