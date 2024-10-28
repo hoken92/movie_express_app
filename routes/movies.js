@@ -17,4 +17,19 @@ router.get("/:id", (req, res, next) => {
   else next();
 });
 
+router.get("/:id/reservations", (req, res, next) => {
+  // Retreives all movie reservations that match the movie ID
+  const movieReservation = reservations.filter((r) => {
+    if (r.movieId == req.params.id) {
+      return r;
+    }
+  });
+
+  if (movieReservation.length > 0) {
+    res.json(movieReservation);
+  } else {
+    next();
+  }
+});
+
 module.exports = router;

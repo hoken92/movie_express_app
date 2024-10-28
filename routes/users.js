@@ -18,7 +18,6 @@ router.get("/:id", (req, res, next) => {
   else next();
 });
 
-// Retrieves comments made by the user with the specified id.
 router.get("/:id/reservations", (req, res, next) => {
   if (req.query.movie_id) {
     // look for a query of matching movieId and show relevant reservations
@@ -34,6 +33,7 @@ router.get("/:id/reservations", (req, res, next) => {
       next();
     }
   } else {
+    // Retrieves reservations made by the user with the specified id.
     const userReservation = reservations.filter((r) => {
       if (r.userId == req.params.id) {
         return r;
