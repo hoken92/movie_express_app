@@ -20,7 +20,7 @@ router.get("/:id", (req, res, next) => {
 
 router.get("/:id/reservations", (req, res, next) => {
   if (req.query.movie_id) {
-    // look for a query of matching movieId and show relevant reservations
+    // look for a query of a matching movieId and show relevant reservations
     const userReservation = reservations.filter((r) => {
       if (r.userId == req.params.id && r.movieId == req.query.movie_id) {
         return r;

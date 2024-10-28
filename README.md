@@ -21,22 +21,23 @@ This Express API contains users, movie listings and reservations made by users.
 
 ### API Endpoints
 
-| HTTP Verbs   | Endpoints                              | Action                                                          |
-| ------------ | -------------------------------------- | --------------------------------------------------------------- |
-| Users        | ---------                              | ------                                                          |
-| GET          | /users                                 | Retrieves all users                                             |
-| GET          | /users/:id                             | Retrieves a user by id param                                    |
-| GET          | /users/:id/reservations                | Retrieves reservations made by user id param                    |
-| GET          | /users/:id/reservations?movie_id=value | Retrieves reservations made by user id param AND movie id query |
-| Movies       | ---------                              | ------                                                          |
-| GET          | /movies                                | Retrieves all movie listings                                    |
-| GET          | /movies/:id                            | Retrieves a movie listing by id param                           |
-| PATCH        | /movies/:id/reservations               | Retrieves all reservations by movie id param                    |
-| Reservations | ---------                              | ------                                                          |
-| GET          | /reservations                          | Retrieves all reservations                                      |
-| POST         | /reservations                          | Creates a reservation                                           |
-| PATCH/PUT    | /reservations/:id                      | Updates a reservation by id param                               |
-| DELETE       | /reservations/:id                      | Deletes a reservation by id param                               |
+| HTTP Verbs   | Endpoints                              | Action                                                                |
+| ------------ | -------------------------------------- | --------------------------------------------------------------------- |
+| Users        | ---------                              | ------                                                                |
+| GET          | /users                                 | Retrieves all users                                                   |
+| GET          | /users/:id                             | Retrieves a user by id param                                          |
+| GET          | /users/:id/reservations                | Retrieves reservations made by user id param                          |
+| GET          | /users/:id/reservations?movie_id=value | Retrieves reservations made by user id param AND movie id query value |
+| Movies       | ---------                              | ------                                                                |
+| GET          | /movies                                | Retrieves all movie listings                                          |
+| GET          | /movies/?genre=value                   | Retrieves movie listings by genre query value (lowercase)             |
+| GET          | /movies/:id                            | Retrieves a movie listing by id param                                 |
+| GET          | /movies/:id/reservations               | Retrieves all reservations by movie id param                          |
+| Reservations | ---------                              | ------                                                                |
+| GET          | /reservations                          | Retrieves all reservations                                            |
+| POST         | /reservations                          | Creates a reservation                                                 |
+| PATCH/PUT    | /reservations/:id                      | Updates a reservation by id param                                     |
+| DELETE       | /reservations/:id                      | Deletes a reservation by id param                                     |
 
 ### Technologies Used
 

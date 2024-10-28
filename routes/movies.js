@@ -6,8 +6,25 @@ const users = require("../data/users.js");
 const movies = require("../data/movies.js");
 const reservations = require("../data/reservations.js");
 
-router.get("/", (req, res) => {
-  res.json(movies);
+router.get("/", (req, res, next) => {
+  if (req.query.genre) {
+    const listOfMovies = movies.filter((movie) => {
+      const genre = movie.genre.toLowerCase();
+      if (genre.includes(req.query.genre)) {
+        return movie;
+      }
+    });
+
+    console.log(listOfMovies);
+
+    if (listOfMovies.length > 0) {
+      res.send(listOfMovies);
+    } else {
+      next();
+    }
+  } else {
+    res.json(movies);
+  }
 });
 
 router.get("/:id", (req, res, next) => {
