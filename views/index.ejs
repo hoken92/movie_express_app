@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Reservation</title>
-    <script defer src="../routes/reservations.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="/new_reservations">Reservation</a></li>
+        <li><a href="/">Reservation</a></li>
       </ul>
     </nav>
-    <h1>Movie Reservation</h1>
+    <h1 id="title">Welcome to my Express API App for Movies</h1>
 
     <div id="app">
+      <h2>Movie Reservation</h2>
       <form action="/reservations" method="post" id="new_reservation">
         <label>
           First Name:

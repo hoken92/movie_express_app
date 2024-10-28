@@ -35,7 +35,6 @@ router.post("/", (req, res, next) => {
       show_date: req.body.show_date,
       seat_number: Math.ceil(Math.random() * 20),
     };
-    console.log(newReservation);
     reservations.push(newReservation);
     res.json(newReservation);
   } else {

@@ -29,12 +29,8 @@ app.use((req, res, next) => {
   next();
 });
 
+// Renders the index.ejs file and displays routes
 app.get("/", (req, res) => {
-  res.send("Welcome to my Express API");
-});
-
-// Create the view for the reservation form
-app.get("/new_reservations", (req, res) => {
   res.render("index");
 });
 

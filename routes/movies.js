@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   res.json(movies);
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", (req, res, next) => {
   const movie = movies.find((m) => req.params.id == m.id);
 
   if (movie) res.json(movie);
